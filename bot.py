@@ -180,7 +180,13 @@ def delete(update, context):
 
     r.delete(user_name)
     update.message.reply_text(f"剷咗\"{' '.join(user_name_str)}\"")
-
+"""
+transfer point from user A to B in redis
+"""
+def transfer(update, context):
+  if not checkPermission(update, context):
+    return
+   
 """
 Check existing users in redis
 """
